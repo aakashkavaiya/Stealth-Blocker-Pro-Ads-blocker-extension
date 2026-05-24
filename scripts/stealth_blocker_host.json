@@ -1,0 +1,9 @@
+{
+  "name": "com.stealth.blocker",
+  "description": "Stealth Blocker Rust Native Backend Host",
+  "path": "C:\\Users\\Aakash Kavaiya\\.gemini\\antigravity\\scratch\\stealth-blocker\\native-backend\\target\\release\\stealth_blocker_host.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://abcdefghijklmnopqrstuvwxyzabcdef/"
+  ]
+}
