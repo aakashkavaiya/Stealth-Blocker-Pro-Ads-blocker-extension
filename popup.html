@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stealth Blocker Pro</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo-icon"></div>
+        <div class="brand-text">
+          <h1>STEALTH<span>BLOCKER</span></h1>
+          <p>v1.0.0 Pro Active</p>
+        </div>
+      </div>
+      <div class="status-badge" id="backend-status-badge">
+        <span class="status-dot"></span>
+        <span class="status-text" id="backend-status-text">Connecting...</span>
+      </div>
+    </header>
+
+    <!-- Stats Grid -->
+    <section class="stats-container">
+      <h2 class="section-title">Telemetry Counters</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-value" id="stat-ads">0</span>
+          <span class="stat-label">Blocked Ads</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-trackers">0</span>
+          <span class="stat-label">Blocked Trackers</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-fingerprints">0</span>
+          <span class="stat-label">Spoofed Fingerprints</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-cnames">0</span>
+          <span class="stat-label">CNAME Uncloaked</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toggle Controls -->
+    <section class="controls-container">
+      <h2 class="section-title">Security Shields</h2>
+      
+      <!-- Ad Blocker (DNR) -->
+      <div class="control-row">
+        <div class="control-info">
+          <h3>Ad Blocker Engine</h3>
+          <p>Declarative Net Request blocking</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-adblock">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- Cosmetic Filtering -->
+      <div class="control-row">
+        <div class="control-info">
+          <h3>Cosmetic Shield</h3>
+          <p>Shadow DOM traversing ad-hider</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-cosmetic">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- Fingerprint Cloaking -->
+      <div class="control-row">
+        <div class="control-info">
+          <h3>Stealth Fingerprinting</h3>
+          <p>Canvas, WebGL, & Audio micro-jitter</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-fingerprint">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- CNAME Unmasking -->
+      <div class="control-row">
+        <div class="control-info">
+          <h3>Rust DNS Resolver</h3>
+          <p>Native CNAME CNAME uncloaker</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-cname">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- WebRTC Leak Protector -->
+      <div class="control-row">
+        <div class="control-info">
+          <h3>WebRTC Leak Shield</h3>
+          <p>Mask local & public network IPs</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-webrtc">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Footer Actions -->
+    <footer class="footer">
+      <button class="btn btn-secondary" id="btn-reset">Reset Stats</button>
+      <div class="footer-note">Stealth Blocker is active and running.</div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
